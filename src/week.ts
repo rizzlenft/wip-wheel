@@ -1,9 +1,21 @@
 /**
- * This week's show card. Edit src/week.json (and keep design/week.json in sync).
- * Guest, hype, and puzzle swap here — not in the spin code.
+ * This week's show card. Guest, hype, and puzzle swap here — not in the spin code.
+ * Keep design/week.json identical so the GDD matches the scene.
  */
 
-import card from './week.json'
+const card = {
+  guestName: 'SURPRISE GUEST',
+  guestKicker: 'THIS WEEK',
+  prizeHype: 'JACKPOT  ·  NFT DROP  ·  LIVE $WIP',
+  whenLine: 'THURSDAYS  ·  12 PM PT',
+  puzzleCategory: 'PHRASE',
+  puzzleAnswer: 'WORK IN PROGRESS',
+  showWeekday: 4,
+  showHour: 12,
+  showMinute: 0,
+  showDurationHours: 3,
+  timeZone: 'America/Los_Angeles'
+}
 
 export const WEEK = {
   guestName: card.guestName,
