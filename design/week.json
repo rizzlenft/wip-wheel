@@ -1,0 +1,14 @@
+{
+  "guestName": "SURPRISE GUEST",
+  "guestKicker": "THIS WEEK",
+  "prizeHype": "JACKPOT  ·  NFT DROP  ·  LIVE $WIP",
+  "whenLine": "THURSDAYS  ·  12 PM PT",
+  "puzzleCategory": "PHRASE",
+  "puzzleAnswer": "WORK IN PROGRESS",
+  "showWeekday": 4,
+  "showHour": 12,
+  "showMinute": 0,
+  "showDurationHours": 3,
+  "timeZone": "America/Los_Angeles",
+  "notes": "Canonical live card is src/week.json. Keep this copy identical so the GDD and the scene tell the same Thursday story."
+}

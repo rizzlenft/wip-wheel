@@ -1,0 +1,62 @@
+{
+  "ecs7": true,
+  "runtimeVersion": "7",
+  "display": {
+    "title": "The WIP Wheel",
+    "description": "The WIP Meetup game show. Gold pad: daily chance. Pink pad: Wheel of Fortune. Live Thursdays 12 PM PT.",
+    "navmapThumbnail": "images/scene-thumbnail.png",
+    "favicon": "favicon_asset"
+  },
+  "owner": "Rizzle",
+  "contact": {
+    "name": "Rizzle",
+    "email": ""
+  },
+  "main": "bin/index.js",
+  "tags": [
+    "game",
+    "social"
+  ],
+  "scene": {
+    "parcels": [
+      "0,0",
+      "1,0",
+      "0,1",
+      "1,1"
+    ],
+    "base": "0,0"
+  },
+  "spawnPoints": [
+    {
+      "name": "audience",
+      "default": true,
+      "position": {
+        "x": [
+          14,
+          18
+        ],
+        "y": [
+          0,
+          0
+        ],
+        "z": [
+          3.6,
+          5.2
+        ]
+      },
+      "cameraTarget": {
+        "x": 16,
+        "y": 8.2,
+        "z": 24
+      }
+    }
+  ],
+  "featureToggles": {
+    "voiceChat": "enabled",
+    "portableExperiences": "enabled"
+  },
+  "landscapeTerrain": false,
+  "requiredPermissions": [
+    "ALLOW_TO_TRIGGER_AVATAR_EMOTE"
+  ]
+}
