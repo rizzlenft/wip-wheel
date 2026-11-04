@@ -3,7 +3,7 @@
   "runtimeVersion": "7",
   "display": {
     "title": "The WIP Wheel",
-    "description": "The WIP Meetup game show. Gold pad: daily chance. Pink pad: Wheel of Fortune. Live Thursdays 12 PM PT.",
+    "description": "Daily wearable on the gold pad. Practice the puzzle wheel at pad 1. Live rounds on the countdown—or the host hits START LIVE. Weekly solve board on the backdrop. World: rizzle.dcl.eth",
     "navmapThumbnail": "images/scene-thumbnail.png",
     "favicon": "favicon_asset"
   },
@@ -15,16 +15,19 @@
   "main": "bin/index.js",
   "tags": [
     "game",
-    "social"
+    "social",
+    "meetup",
+    "prizes",
+    "wearables"
   ],
   "scene": {
+    "base": "0,0",
     "parcels": [
       "0,0",
       "1,0",
       "0,1",
       "1,1"
-    ],
-    "base": "0,0"
+    ]
   },
   "spawnPoints": [
     {
@@ -32,31 +35,46 @@
       "default": true,
       "position": {
         "x": [
-          14,
-          18
+          15.3,
+          16.7
         ],
         "y": [
           0,
           0
         ],
         "z": [
-          3.6,
-          5.2
+          7.45,
+          8.55
         ]
       },
       "cameraTarget": {
         "x": 16,
-        "y": 8.2,
-        "z": 24
+        "y": 3,
+        "z": 18
       }
     }
   ],
   "featureToggles": {
     "voiceChat": "enabled",
-    "portableExperiences": "enabled"
+    "portableExperiences": "enabled",
+    "nearbyVoiceChat": "enabled"
   },
   "landscapeTerrain": false,
   "requiredPermissions": [
-    "ALLOW_TO_TRIGGER_AVATAR_EMOTE"
-  ]
+    "ALLOW_TO_TRIGGER_AVATAR_EMOTE",
+    "ALLOW_TO_MOVE_PLAYER_INSIDE_SCENE",
+    "OPEN_EXTERNAL_LINK"
+  ],
+  "worldConfiguration": {
+    "name": "rizzle.dcl.eth"
+  },
+  "authoritativeMultiplayer": true,
+  "creator": "",
+  "skyboxConfig": {
+    "fixedTime": 43200
+  },
+  "source": {
+    "origin": "creator-hub",
+    "projectId": "e3e640c3-a183-43aa-b741-2fb76c30d190"
+  }
 }

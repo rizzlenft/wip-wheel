@@ -1,0 +1,23 @@
+# Render Blueprint — deploy from dashboard: New → Blueprint → connect repo, set root to rewards-api
+# Or: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: wip-wheel-rewards
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEV_AUTH_BYPASS
+        value: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_TOKEN
+        generateValue: true
+    disk:
+      name: wip-wheel-claims
+      mountPath: /var/data
+      sizeGB: 1

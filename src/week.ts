@@ -1,15 +1,27 @@
 /**
  * This week's show card. Guest, hype, and puzzle swap here — not in the spin code.
- * Keep design/week.json identical so the GDD matches the scene.
+ *
+ * Ritual (guest often lands 1–2 days before Meetup): design/week-ritual.md
+ * Phrase bank: design/week-puzzle-bank.md
+ * Validate: npm run check:week  →  Preview  →  one publish
+ *
+ * Edit `card` below, then mirror the same fields in design/week.json + src/week.json.
+ * Do not import JSON into the scene (Hub tsconfig).
+ *
+ * Puzzle rules: A–Z and spaces only. Must fit 3×14 (puzzleFitsBoard). Board is always
+ * 3 rows; strip sits under row 3 — do not lengthen past the budget.
+ *
+ * Scale later: endless pool between Thursdays; host endpoint to swap without republish.
  */
 
 const card = {
-  guestName: 'SURPRISE GUEST',
-  guestKicker: 'THIS WEEK',
-  prizeHype: 'JACKPOT  ·  NFT DROP  ·  LIVE $WIP',
-  whenLine: 'THURSDAYS  ·  12 PM PT',
+  // Staging until next guest is known — swap guestName + puzzleAnswer when locked.
+  guestName: 'NEXT GUEST',
+  guestKicker: 'COMING UP',
+  prizeHype: 'WEARABLES  ·  LIVE SPINS  ·  THE WIP MEETUP',
+  whenLine: 'THURSDAY  3 PM ET',
   puzzleCategory: 'PHRASE',
-  puzzleAnswer: 'WORK IN PROGRESS',
+  puzzleAnswer: 'WITNESS THE WIZARDRY OF UNTITLEDXYZ',
   showWeekday: 4,
   showHour: 12,
   showMinute: 0,
@@ -30,6 +42,24 @@ export const WEEK = {
   showMinute: card.showMinute,
   showDurationHours: card.showDurationHours,
   timeZone: card.timeZone
+}
+
+/** In-world CTA + marketing link for the hang that funds the room. */
+export const MEETUP_URL = 'https://thewipmeetup.com'
+
+/** Live watch link. Banner click opens this. 12:00 PT on the clock is this same hour. */
+export const DISCORD_URL = 'https://discord.gg/bTjc6k5uss'
+
+/**
+ * Demo / pre–host-controls: show (Wheel of Fortune) playable every day.
+ * Server already allows showSpin anytime — this flag drives HUD/copy only.
+ * Flip to `false` when we ship a real “go live” switch and want Thursday-only invites.
+ * Title card still says THURSDAY 3 PM ET (same instant as 12:00 PT). Do not fake LIVE NOW off-schedule.
+ */
+export const SHOW_OPEN_ALWAYS = true
+
+export function isShowPlayable(now = Date.now()): boolean {
+  return SHOW_OPEN_ALWAYS || isLiveShow(now)
 }
 
 const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -106,6 +136,31 @@ export function nextShowStartUtc(now = Date.now()): number {
   if (addDays === 0 && minutes >= end) addDays = 7
   const target = addCalendarDays(pt.year, pt.month, pt.day, addDays)
   return zonedLocalToUtc(target.year, target.month, target.day, WEEK.showHour, WEEK.showMinute, WEEK.timeZone)
+}
+
+/** Default live-round gap. Server EnvVar ROUND_EVERY_SEC overrides this. */
+export const DEFAULT_ROUND_MS = 2 * 60 * 60 * 1000
+
+export function clampRoundMs(seconds: number): number {
+  const min = 60 * 1000
+  const max = 24 * 60 * 60 * 1000
+  if (!Number.isFinite(seconds) || seconds <= 0) return DEFAULT_ROUND_MS
+  return Math.min(max, Math.max(min, Math.floor(seconds) * 1000))
+}
+
+/** Next UTC boundary after `now`. Aligned so a restart shows the same clock. */
+export function nextRoundBoundary(now: number, intervalMs: number): number {
+  const span = intervalMs > 0 ? intervalMs : DEFAULT_ROUND_MS
+  return (Math.floor(now / span) + 1) * span
+}
+
+export function formatRoundLeft(ms: number): string {
+  const total = Math.max(0, Math.floor(ms / 1000))
+  const hours = Math.floor(total / 3600)
+  const minutes = Math.floor((total % 3600) / 60)
+  const seconds = total % 60
+  if (hours > 0) return `${pad2(hours)}H ${pad2(minutes)}M ${pad2(seconds)}S`
+  return `${pad2(minutes)}M ${pad2(seconds)}S`
 }
 
 export function formatDuration(ms: number): string {

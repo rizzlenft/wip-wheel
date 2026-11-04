@@ -1,0 +1,10 @@
+# Railway — from rewards-api folder: npx @railway/cli init && npx @railway/cli up
+# In the service settings, add a volume mount: /app/data and set env DATA_DIR=/app/data
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

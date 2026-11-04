@@ -30,6 +30,14 @@ PRIZES = [
     ("TRY AGAIN", "#3A2460"),
 ]
 
+# Bay V1 live round — must match src/livePrizes.ts labels.
+LIVE_PRIZES = [
+    ("LETTER", "#3DDCFF"),
+    ("WEARABLE", "#7CFFB2"),
+    ("LOSE TURN", "#FFD166"),
+    ("BANKRUPT", "#FF6B6B"),
+]
+
 
 def font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     for path in (
@@ -87,18 +95,19 @@ NAME_SCHEMA = {
 }
 
 
-def generate_wheel(path: Path, size: int = 1024) -> None:
+def generate_wheel(path: Path, size: int = 1024, slices: list[tuple[str, str]] | None = None) -> None:
+    prize_rows = slices if slices is not None else PRIZES
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     cx = cy = size / 2
     radius = size / 2 - 12
     bbox = [cx - radius, cy - radius, cx + radius, cy + radius]
-    n = len(PRIZES)
+    n = len(prize_rows)
     slice_deg = 360 / n
     start0 = -90
-    label_font = font(36)
+    label_font = font(36 if n <= 4 else 36)
 
-    for i, (label, hex_color) in enumerate(PRIZES):
+    for i, (label, hex_color) in enumerate(prize_rows):
         a0 = start0 + i * slice_deg
         a1 = a0 + slice_deg
         draw.pieslice(bbox, a0, a1, fill=hex_rgb(hex_color) + (255,))
@@ -800,6 +809,7 @@ def main() -> None:
     IMAGES.mkdir(parents=True, exist_ok=True)
     THUMBS.mkdir(parents=True, exist_ok=True)
     generate_wheel(IMAGES / "wheel-face.png")
+    generate_wheel(IMAGES / "wheel-face-live-4.png", slices=LIVE_PRIZES)
     generate_ring(IMAGES / "wheel-ring.png")
     if LOGO_SRC.exists():
         convert_logo(LOGO_SRC, IMAGES / "wip-logo.png")
@@ -813,4 +823,12 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    import sys
+
+    IMAGES.mkdir(parents=True, exist_ok=True)
+    if len(sys.argv) > 1 and sys.argv[1] == "--wheels-only":
+        generate_wheel(IMAGES / "wheel-face.png")
+        generate_wheel(IMAGES / "wheel-face-live-4.png", slices=LIVE_PRIZES)
+        generate_ring(IMAGES / "wheel-ring.png")
+        raise SystemExit(0)
     main()

@@ -25,3 +25,10 @@ cursorignore
 scripts
 *.py
 design
+agent
+rewards-api
+fulfill-worker
+skills-lock.json
+tmp
+*.pdf
+blender.crash.txt

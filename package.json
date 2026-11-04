@@ -1,17 +1,28 @@
 {
   "name": "wip-wheel",
   "version": "1.0.0",
-  "description": "The WIP Wheel \u2014 Decentraland game-show scene for The WIP Meetup",
+  "description": "The WIP Wheel — Decentraland game-show scene for The WIP Meetup",
   "scripts": {
     "start": "sdk-commands start",
     "deploy": "sdk-commands deploy",
     "build": "sdk-commands build",
     "upgrade-sdk": "npm install --save-dev @dcl/sdk@latest",
-    "upgrade-sdk:next": "npm install --save-dev @dcl/sdk@next"
+    "upgrade-sdk:next": "npm install --save-dev @dcl/sdk@next",
+    "server-logs": "sdk-commands sdk-server-logs",
+    "treasury-status": "node scripts/treasury-status.mjs",
+    "verify:preview-path": "node scripts/verify-preview-path.mjs",
+    "verify:spawn-sync": "node scripts/verify-spawn-sync.mjs",
+    "sync:spawn": "node scripts/sync-spawn-from-layout.mjs",
+    "check:week": "node scripts/check-week-card.mjs",
+    "verify:v1-preview": "node scripts/check-v1-preview.mjs",
+    "verify:v1-publish": "node scripts/check-v1-publish.mjs",
+    "storage:v1": "node scripts/apply-v1-storage.mjs",
+    "storage:v1:preview": "node scripts/apply-v1-storage-preview.mjs",
+    "generate:wheels": "python3 scripts/generate-assets.py --wheels-only"
   },
   "devDependencies": {
-    "@dcl/js-runtime": "latest",
-    "@dcl/sdk": "latest"
+    "@dcl/js-runtime": "7.29.1-36863326504.commit-aa54c50",
+    "@dcl/sdk": "^7.29.1-36863326504.commit-aa54c50"
   },
   "engines": {
     "node": ">=16.0.0",
@@ -22,5 +33,8 @@
     "singleQuote": true,
     "printWidth": 120,
     "trailingComma": "none"
+  },
+  "dependencies": {
+    "micro-eth-signer": "^0.20.1"
   }
 }

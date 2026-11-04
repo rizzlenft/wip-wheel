@@ -3,6 +3,60 @@
   "components": [
     {
       "name": "core::Transform",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              }
+            }
+          },
+          "scale": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              }
+            }
+          },
+          "rotation": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              },
+              "w": {
+                "type": "number"
+              }
+            }
+          },
+          "parent": {
+            "type": "integer"
+          }
+        },
+        "serializationType": "transform"
+      },
       "data": {
         "512": {
           "json": {
@@ -46,69 +100,6 @@
             "parent": 0
           }
         },
-        "548": {
-          "json": {
-            "position": {
-              "x": 16,
-              "y": 0.2,
-              "z": 13.2
-            },
-            "scale": {
-              "x": 16.5,
-              "y": 0.06,
-              "z": 0.12
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "549": {
-          "json": {
-            "position": {
-              "x": 7.8,
-              "y": 0.2,
-              "z": 20.4
-            },
-            "scale": {
-              "x": 0.12,
-              "y": 0.06,
-              "z": 14.5
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "550": {
-          "json": {
-            "position": {
-              "x": 24.2,
-              "y": 0.2,
-              "z": 20.4
-            },
-            "scale": {
-              "x": 0.12,
-              "y": 0.06,
-              "z": 14.5
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
         "514": {
           "json": {
             "position": {
@@ -120,27 +111,6 @@
               "x": 26,
               "y": 9.6,
               "z": 0.28
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "556": {
-          "json": {
-            "position": {
-              "x": 16,
-              "y": 10.5,
-              "z": 31.38
-            },
-            "scale": {
-              "x": 22.6,
-              "y": 5.9,
-              "z": 0.08
             },
             "rotation": {
               "x": 0,
@@ -235,90 +205,6 @@
             "parent": 0
           }
         },
-        "528": {
-          "json": {
-            "position": {
-              "x": 19.2,
-              "y": 3.4,
-              "z": 30.92
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "542": {
-          "json": {
-            "position": {
-              "x": 26.2,
-              "y": 8.55,
-              "z": 30.92
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "539": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 1.35,
-              "z": 23.85
-            },
-            "scale": {
-              "x": 0.5,
-              "y": 2.5,
-              "z": 0.5
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "560": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 0.2,
-              "z": 23.85
-            },
-            "scale": {
-              "x": 1.45,
-              "y": 0.18,
-              "z": 1.45
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
         "520": {
           "json": {
             "position": {
@@ -348,8 +234,8 @@
               "z": 0
             },
             "scale": {
-              "x": 4.0,
-              "y": 4.0,
+              "x": 4,
+              "y": 4,
               "z": 1
             },
             "rotation": {
@@ -357,27 +243,6 @@
               "y": 0,
               "z": 0,
               "w": 1
-            },
-            "parent": 520
-          }
-        },
-        "547": {
-          "json": {
-            "position": {
-              "x": 0,
-              "y": 0,
-              "z": 0
-            },
-            "scale": {
-              "x": 2.0,
-              "y": 0.1,
-              "z": 2.0
-            },
-            "rotation": {
-              "x": 0.70710678,
-              "y": 0,
-              "z": 0,
-              "w": 0.70710678
             },
             "parent": 520
           }
@@ -403,27 +268,6 @@
             "parent": 520
           }
         },
-        "546": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 3.2,
-              "z": 23.38
-            },
-            "scale": {
-              "x": 4.22,
-              "y": 4.22,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
         "523": {
           "json": {
             "position": {
@@ -435,69 +279,6 @@
               "x": 0.2,
               "y": 0.52,
               "z": 0.14
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "552": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 5.08,
-              "z": 23.28
-            },
-            "scale": {
-              "x": 0.34,
-              "y": 0.16,
-              "z": 0.16
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "551": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 0.16,
-              "z": 18.55
-            },
-            "scale": {
-              "x": 2.3,
-              "y": 0.05,
-              "z": 2.3
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "559": {
-          "json": {
-            "position": {
-              "x": 7.5,
-              "y": 0.28,
-              "z": 18.55
-            },
-            "scale": {
-              "x": 1.7,
-              "y": 0.22,
-              "z": 1.7
             },
             "rotation": {
               "x": 0,
@@ -535,6 +316,27 @@
               "x": 7.5,
               "y": 1.62,
               "z": 18.55
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "528": {
+          "json": {
+            "position": {
+              "x": 19.2,
+              "y": 3.4,
+              "z": 30.92
             },
             "scale": {
               "x": 1,
@@ -718,17 +520,17 @@
             "parent": 0
           }
         },
-        "561": {
+        "538": {
           "json": {
             "position": {
-              "x": 9.6,
-              "y": 0.08,
-              "z": 7.6
+              "x": 16,
+              "y": 9.8,
+              "z": 21.5
             },
             "scale": {
-              "x": 5.2,
-              "y": 0.12,
-              "z": 5.8
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "rotation": {
               "x": 0,
@@ -739,17 +541,17 @@
             "parent": 0
           }
         },
-        "562": {
+        "539": {
           "json": {
             "position": {
-              "x": 22.4,
-              "y": 0.08,
-              "z": 7.6
+              "x": 7.5,
+              "y": 1.35,
+              "z": 23.85
             },
             "scale": {
-              "x": 5.2,
-              "y": 0.12,
-              "z": 5.8
+              "x": 0.5,
+              "y": 2.5,
+              "z": 0.5
             },
             "rotation": {
               "x": 0,
@@ -760,38 +562,17 @@
             "parent": 0
           }
         },
-        "567": {
+        "542": {
           "json": {
             "position": {
-              "x": 9.6,
-              "y": 0.16,
-              "z": 4.75
+              "x": 26.2,
+              "y": 8.55,
+              "z": 30.92
             },
             "scale": {
-              "x": 5.2,
-              "y": 0.05,
-              "z": 0.1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "568": {
-          "json": {
-            "position": {
-              "x": 22.4,
-              "y": 0.16,
-              "z": 4.75
-            },
-            "scale": {
-              "x": 5.2,
-              "y": 0.05,
-              "z": 0.1
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "rotation": {
               "x": 0,
@@ -844,6 +625,153 @@
             "parent": 0
           }
         },
+        "546": {
+          "json": {
+            "position": {
+              "x": 7.5,
+              "y": 3.2,
+              "z": 23.38
+            },
+            "scale": {
+              "x": 4.22,
+              "y": 4.22,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "547": {
+          "json": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 2,
+              "y": 0.1,
+              "z": 2
+            },
+            "rotation": {
+              "x": 0.70710678,
+              "y": 0,
+              "z": 0,
+              "w": 0.70710678
+            },
+            "parent": 520
+          }
+        },
+        "548": {
+          "json": {
+            "position": {
+              "x": 16,
+              "y": 0.2,
+              "z": 13.2
+            },
+            "scale": {
+              "x": 16.5,
+              "y": 0.06,
+              "z": 0.12
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "549": {
+          "json": {
+            "position": {
+              "x": 7.8,
+              "y": 0.2,
+              "z": 20.4
+            },
+            "scale": {
+              "x": 0.12,
+              "y": 0.06,
+              "z": 14.5
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "550": {
+          "json": {
+            "position": {
+              "x": 24.2,
+              "y": 0.2,
+              "z": 20.4
+            },
+            "scale": {
+              "x": 0.12,
+              "y": 0.06,
+              "z": 14.5
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "551": {
+          "json": {
+            "position": {
+              "x": 7.5,
+              "y": 0.16,
+              "z": 18.55
+            },
+            "scale": {
+              "x": 2.3,
+              "y": 0.05,
+              "z": 2.3
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "552": {
+          "json": {
+            "position": {
+              "x": 7.5,
+              "y": 5.08,
+              "z": 23.28
+            },
+            "scale": {
+              "x": 0.34,
+              "y": 0.16,
+              "z": 0.16
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
         "553": {
           "json": {
             "position": {
@@ -886,122 +814,17 @@
             "parent": 0
           }
         },
-        "563": {
-          "json": {
-            "position": {
-              "x": 9.6,
-              "y": 0.38,
-              "z": 6.4
-            },
-            "scale": {
-              "x": 4.4,
-              "y": 0.4,
-              "z": 1.05
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "564": {
-          "json": {
-            "position": {
-              "x": 22.4,
-              "y": 0.38,
-              "z": 6.4
-            },
-            "scale": {
-              "x": 4.4,
-              "y": 0.4,
-              "z": 1.05
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "565": {
-          "json": {
-            "position": {
-              "x": 9.6,
-              "y": 0.82,
-              "z": 6.82
-            },
-            "scale": {
-              "x": 4.4,
-              "y": 0.52,
-              "z": 0.16
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "566": {
-          "json": {
-            "position": {
-              "x": 22.4,
-              "y": 0.82,
-              "z": 6.82
-            },
-            "scale": {
-              "x": 4.4,
-              "y": 0.52,
-              "z": 0.16
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "569": {
+        "556": {
           "json": {
             "position": {
               "x": 16,
-              "y": 0.95,
-              "z": 4.6
+              "y": 10.5,
+              "z": 31.38
             },
             "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "538": {
-          "json": {
-            "position": {
-              "x": 16,
-              "y": 9.8,
-              "z": 21.5
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
+              "x": 22.6,
+              "y": 5.9,
+              "z": 0.08
             },
             "rotation": {
               "x": 0,
@@ -1053,681 +876,248 @@
             },
             "parent": 0
           }
-        }
-      }
-    },
-    {
-      "name": "core::MeshRenderer",
-      "data": {
-        "512": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
         },
-        "513": {
+        "559": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "548": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "549": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "550": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "514": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "556": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "515": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "516": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "517": {
-          "json": {
-            "mesh": {
-              "$case": "plane",
-              "plane": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "518": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "539": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 7.5,
+              "y": 0.28,
+              "z": 18.55
+            },
+            "scale": {
+              "x": 1.7,
+              "y": 0.22,
+              "z": 1.7
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
         "560": {
           "json": {
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "521": {
-          "json": {
-            "mesh": {
-              "$case": "plane",
-              "plane": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "522": {
-          "json": {
-            "mesh": {
-              "$case": "sphere",
-              "sphere": {}
-            }
-          }
-        },
-        "546": {
-          "json": {
-            "mesh": {
-              "$case": "plane",
-              "plane": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "523": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "552": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "551": {
-          "json": {
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "559": {
-          "json": {
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "524": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "529": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "531": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "533": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "535": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 7.5,
+              "y": 0.2,
+              "z": 23.85
+            },
+            "scale": {
+              "x": 1.45,
+              "y": 0.18,
+              "z": 1.45
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
         "561": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 9.6,
+              "y": 0.08,
+              "z": 7.6
+            },
+            "scale": {
+              "x": 5.2,
+              "y": 0.12,
+              "z": 5.8
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
         "562": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 22.4,
+              "y": 0.08,
+              "z": 7.6
+            },
+            "scale": {
+              "x": 5.2,
+              "y": 0.12,
+              "z": 5.8
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "563": {
+          "json": {
+            "position": {
+              "x": 9.6,
+              "y": 0.38,
+              "z": 6.4
+            },
+            "scale": {
+              "x": 4.4,
+              "y": 0.4,
+              "z": 1.05
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "564": {
+          "json": {
+            "position": {
+              "x": 22.4,
+              "y": 0.38,
+              "z": 6.4
+            },
+            "scale": {
+              "x": 4.4,
+              "y": 0.4,
+              "z": 1.05
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "565": {
+          "json": {
+            "position": {
+              "x": 9.6,
+              "y": 0.82,
+              "z": 6.82
+            },
+            "scale": {
+              "x": 4.4,
+              "y": 0.52,
+              "z": 0.16
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "566": {
+          "json": {
+            "position": {
+              "x": 22.4,
+              "y": 0.82,
+              "z": 6.82
+            },
+            "scale": {
+              "x": 4.4,
+              "y": 0.52,
+              "z": 0.16
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
         "567": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 9.6,
+              "y": 0.16,
+              "z": 4.75
+            },
+            "scale": {
+              "x": 5.2,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
         "568": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 22.4,
+              "y": 0.16,
+              "z": 4.75
+            },
+            "scale": {
+              "x": 5.2,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         },
-        "543": {
+        "569": {
           "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "545": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "553": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "555": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "563": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "564": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "565": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "566": {
-          "json": {
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "core::MeshCollider",
-      "data": {
-        "512": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "513": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "514": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "515": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "516": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "539": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "560": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "547": {
-          "json": {
-            "collisionMask": 1,
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "523": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "552": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "559": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "cylinder",
-              "cylinder": {
-                "radiusTop": 1,
-                "radiusBottom": 1
-              }
-            }
-          }
-        },
-        "524": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "529": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "531": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "533": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "535": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "561": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "562": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "543": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "545": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "553": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "555": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "563": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "564": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "565": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
-          }
-        },
-        "566": {
-          "json": {
-            "collisionMask": 3,
-            "mesh": {
-              "$case": "box",
-              "box": {
-                "uvs": []
-              }
-            }
+            "position": {
+              "x": 16,
+              "y": 0.95,
+              "z": 4.6
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
           }
         }
       }
     },
     {
       "name": "core::Material",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBMaterial"
+      },
       "data": {
         "512": {
           "json": {
@@ -1738,7 +1128,7 @@
                   "r": 0.047058823529411764,
                   "g": 0.027450980392156862,
                   "b": 0.08627450980392157,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1760,7 +1150,7 @@
                   "r": 0.10196078431372549,
                   "g": 0.043137254901960784,
                   "b": 0.1803921568627451,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1769,78 +1159,6 @@
                   "g": 0,
                   "b": 0
                 }
-              }
-            }
-          }
-        },
-        "548": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 1.4
-              }
-            }
-          }
-        },
-        "549": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 1.1
-              }
-            }
-          }
-        },
-        "550": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 1.1
               }
             }
           }
@@ -1854,7 +1172,7 @@
                   "r": 0.027450980392156862,
                   "g": 0.01568627450980392,
                   "b": 0.07058823529411765,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1863,30 +1181,6 @@
                   "g": 0,
                   "b": 0
                 }
-              }
-            }
-          }
-        },
-        "556": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 0.7
               }
             }
           }
@@ -1900,7 +1194,7 @@
                   "r": 0.07058823529411765,
                   "g": 0.03137254901960784,
                   "b": 0.12156862745098039,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1922,7 +1216,7 @@
                   "r": 0.07058823529411765,
                   "g": 0.03137254901960784,
                   "b": 0.12156862745098039,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1990,7 +1284,7 @@
                   "r": 0.08627450980392157,
                   "g": 0.0392156862745098,
                   "b": 0.1568627450980392,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -1998,55 +1292,9 @@
                   "r": 0.16470588235294117,
                   "g": 0.07058823529411765,
                   "b": 0.2823529411764706,
-                  "a": 1.0
+                  "a": 1
                 },
                 "emissiveIntensity": 0.35
-              }
-            }
-          }
-        },
-        "539": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.16470588235294117,
-                  "g": 0.07058823529411765,
-                  "b": 0.2823529411764706,
-                  "a": 1.0
-                },
-                "metallic": 0.35,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "560": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.10196078431372549,
-                  "g": 0.043137254901960784,
-                  "b": 0.1803921568627451,
-                  "a": 1.0
-                },
-                "metallic": 0.15,
-                "roughness": 0.55,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 0.7
               }
             }
           }
@@ -2106,17 +1354,223 @@
                   "r": 0.10196078431372549,
                   "g": 0.043137254901960784,
                   "b": 0.1803921568627451,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.55,
                 "roughness": 0.28,
                 "emissiveColor": {
-                  "r": 1.0,
+                  "r": 1,
                   "g": 0.30196078431372547,
                   "b": 0.6509803921568628,
                   "a": 0.45
                 },
                 "emissiveIntensity": 0.8
+              }
+            }
+          }
+        },
+        "523": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.8196078431372549,
+                  "b": 0.4,
+                  "a": 1
+                },
+                "metallic": 0.35,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.8196078431372549,
+                  "b": 0.4,
+                  "a": 1
+                },
+                "emissiveIntensity": 1.1
+              }
+            }
+          }
+        },
+        "524": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "metallic": 0.05,
+                "roughness": 0.35,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 0.85
+              }
+            }
+          }
+        },
+        "529": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
+                },
+                "emissiveIntensity": 0.55
+              }
+            }
+          }
+        },
+        "531": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 0.5
+              }
+            }
+          }
+        },
+        "533": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.22745098039215686,
+                  "g": 0.1411764705882353,
+                  "b": 0.3764705882352941,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "535": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.22745098039215686,
+                  "g": 0.1411764705882353,
+                  "b": 0.3764705882352941,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "539": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.16470588235294117,
+                  "g": 0.07058823529411765,
+                  "b": 0.2823529411764706,
+                  "a": 1
+                },
+                "metallic": 0.35,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "543": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.13333333333333333,
+                  "g": 0.06274509803921569,
+                  "b": 0.2196078431372549,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "545": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.13333333333333333,
+                  "g": 0.06274509803921569,
+                  "b": 0.2196078431372549,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
               }
             }
           }
@@ -2167,50 +1621,74 @@
             }
           }
         },
-        "523": {
+        "548": {
           "json": {
             "material": {
               "$case": "pbr",
               "pbr": {
                 "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.8196078431372549,
-                  "b": 0.4,
-                  "a": 1.0
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
                 },
-                "metallic": 0.35,
+                "metallic": 0.08,
                 "roughness": 0.72,
                 "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.8196078431372549,
-                  "b": 0.4,
-                  "a": 1.0
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 1.4
+              }
+            }
+          }
+        },
+        "549": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
                 },
                 "emissiveIntensity": 1.1
               }
             }
           }
         },
-        "552": {
+        "550": {
           "json": {
             "material": {
               "$case": "pbr",
               "pbr": {
                 "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
                 },
-                "metallic": 0.25,
+                "metallic": 0.08,
                 "roughness": 0.72,
                 "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
+                  "r": 0.48627450980392156,
+                  "g": 0.3607843137254902,
+                  "b": 1,
+                  "a": 1
                 },
-                "emissiveIntensity": 1.0
+                "emissiveIntensity": 1.1
               }
             }
           }
@@ -2221,294 +1699,44 @@
               "$case": "pbr",
               "pbr": {
                 "albedoColor": {
-                  "r": 1.0,
+                  "r": 1,
                   "g": 0.30196078431372547,
                   "b": 0.6509803921568628,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.15,
                 "roughness": 0.55,
                 "emissiveColor": {
-                  "r": 1.0,
+                  "r": 1,
                   "g": 0.30196078431372547,
                   "b": 0.6509803921568628,
-                  "a": 1.0
+                  "a": 1
                 },
                 "emissiveIntensity": 0.7
               }
             }
           }
         },
-        "559": {
+        "552": {
           "json": {
             "material": {
               "$case": "pbr",
               "pbr": {
                 "albedoColor": {
-                  "r": 0.16470588235294117,
-                  "g": 0.07058823529411765,
-                  "b": 0.2823529411764706,
-                  "a": 1.0
-                },
-                "metallic": 0.15,
-                "roughness": 0.55,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "524": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
+                  "r": 1,
                   "g": 0.30196078431372547,
                   "b": 0.6509803921568628,
-                  "a": 1.0
+                  "a": 1
                 },
-                "metallic": 0.05,
-                "roughness": 0.35,
+                "metallic": 0.25,
+                "roughness": 0.72,
                 "emissiveColor": {
-                  "r": 1.0,
+                  "r": 1,
                   "g": 0.30196078431372547,
                   "b": 0.6509803921568628,
-                  "a": 1.0
+                  "a": 1
                 },
-                "emissiveIntensity": 0.85
-              }
-            }
-          }
-        },
-        "529": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0.48627450980392156,
-                  "g": 0.3607843137254902,
-                  "b": 1.0,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 0.55
-              }
-            }
-          }
-        },
-        "531": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 0.5
-              }
-            }
-          }
-        },
-        "533": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.22745098039215686,
-                  "g": 0.1411764705882353,
-                  "b": 0.3764705882352941,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "535": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.22745098039215686,
-                  "g": 0.1411764705882353,
-                  "b": 0.3764705882352941,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "561": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.10196078431372549,
-                  "g": 0.043137254901960784,
-                  "b": 0.1803921568627451,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "562": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.10196078431372549,
-                  "g": 0.043137254901960784,
-                  "b": 0.1803921568627451,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "567": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 1.1
-              }
-            }
-          }
-        },
-        "568": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 1.0,
-                  "g": 0.30196078431372547,
-                  "b": 0.6509803921568628,
-                  "a": 1.0
-                },
-                "emissiveIntensity": 1.1
-              }
-            }
-          }
-        },
-        "543": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.13333333333333333,
-                  "g": 0.06274509803921569,
-                  "b": 0.2196078431372549,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
-              }
-            }
-          }
-        },
-        "545": {
-          "json": {
-            "material": {
-              "$case": "pbr",
-              "pbr": {
-                "albedoColor": {
-                  "r": 0.13333333333333333,
-                  "g": 0.06274509803921569,
-                  "b": 0.2196078431372549,
-                  "a": 1.0
-                },
-                "metallic": 0.08,
-                "roughness": 0.72,
-                "emissiveColor": {
-                  "r": 0,
-                  "g": 0,
-                  "b": 0
-                }
+                "emissiveIntensity": 1
               }
             }
           }
@@ -2522,7 +1750,7 @@
                   "r": 0.16470588235294117,
                   "g": 0.07058823529411765,
                   "b": 0.2823529411764706,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2544,7 +1772,121 @@
                   "r": 0.16470588235294117,
                   "g": 0.07058823529411765,
                   "b": 0.2823529411764706,
-                  "a": 1.0
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "556": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 0.7
+              }
+            }
+          }
+        },
+        "559": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.16470588235294117,
+                  "g": 0.07058823529411765,
+                  "b": 0.2823529411764706,
+                  "a": 1
+                },
+                "metallic": 0.15,
+                "roughness": 0.55,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "560": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.10196078431372549,
+                  "g": 0.043137254901960784,
+                  "b": 0.1803921568627451,
+                  "a": 1
+                },
+                "metallic": 0.15,
+                "roughness": 0.55,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 0.7
+              }
+            }
+          }
+        },
+        "561": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.10196078431372549,
+                  "g": 0.043137254901960784,
+                  "b": 0.1803921568627451,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 0,
+                  "g": 0,
+                  "b": 0
+                }
+              }
+            }
+          }
+        },
+        "562": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 0.10196078431372549,
+                  "g": 0.043137254901960784,
+                  "b": 0.1803921568627451,
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2566,7 +1908,7 @@
                   "r": 0.13333333333333333,
                   "g": 0.06274509803921569,
                   "b": 0.2196078431372549,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2588,7 +1930,7 @@
                   "r": 0.13333333333333333,
                   "g": 0.06274509803921569,
                   "b": 0.2196078431372549,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2610,7 +1952,7 @@
                   "r": 0.16470588235294117,
                   "g": 0.07058823529411765,
                   "b": 0.2823529411764706,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2632,7 +1974,7 @@
                   "r": 0.16470588235294117,
                   "g": 0.07058823529411765,
                   "b": 0.2823529411764706,
-                  "a": 1.0
+                  "a": 1
                 },
                 "metallic": 0.08,
                 "roughness": 0.72,
@@ -2644,57 +1986,1040 @@
               }
             }
           }
+        },
+        "567": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 1.1
+              }
+            }
+          }
+        },
+        "568": {
+          "json": {
+            "material": {
+              "$case": "pbr",
+              "pbr": {
+                "albedoColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "metallic": 0.08,
+                "roughness": 0.72,
+                "emissiveColor": {
+                  "r": 1,
+                  "g": 0.30196078431372547,
+                  "b": 0.6509803921568628,
+                  "a": 1
+                },
+                "emissiveIntensity": 1.1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "core::MeshCollider",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBMeshCollider"
+      },
+      "data": {
+        "512": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "513": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "514": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "515": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "516": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "523": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "524": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "529": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "531": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "533": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "535": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "539": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "543": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "545": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "547": {
+          "json": {
+            "collisionMask": 1,
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "552": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "553": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "555": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "559": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "560": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "561": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "562": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "563": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "564": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "565": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "566": {
+          "json": {
+            "collisionMask": 3,
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "core::MeshRenderer",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBMeshRenderer"
+      },
+      "data": {
+        "512": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "513": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "514": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "515": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "516": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "517": {
+          "json": {
+            "mesh": {
+              "$case": "plane",
+              "plane": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "518": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "521": {
+          "json": {
+            "mesh": {
+              "$case": "plane",
+              "plane": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "522": {
+          "json": {
+            "mesh": {
+              "$case": "sphere",
+              "sphere": {}
+            }
+          }
+        },
+        "523": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "524": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "529": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "531": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "533": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "535": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "539": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "543": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "545": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "546": {
+          "json": {
+            "mesh": {
+              "$case": "plane",
+              "plane": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "548": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "549": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "550": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "551": {
+          "json": {
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "552": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "553": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "555": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "556": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "559": {
+          "json": {
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "560": {
+          "json": {
+            "mesh": {
+              "$case": "cylinder",
+              "cylinder": {
+                "radiusTop": 1,
+                "radiusBottom": 1
+              }
+            }
+          }
+        },
+        "561": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "562": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "563": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "564": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "565": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "566": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "567": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        },
+        "568": {
+          "json": {
+            "mesh": {
+              "$case": "box",
+              "box": {
+                "uvs": []
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "core-schema::Name",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "serializationType": "utf8-string"
+          }
+        },
+        "serializationType": "map"
+      },
+      "data": {
+        "512": {
+          "json": {
+            "value": "Floor"
+          }
+        },
+        "513": {
+          "json": {
+            "value": "Stage"
+          }
+        },
+        "514": {
+          "json": {
+            "value": "Backdrop"
+          }
+        },
+        "515": {
+          "json": {
+            "value": "WingLeft"
+          }
+        },
+        "516": {
+          "json": {
+            "value": "WingRight"
+          }
+        },
+        "517": {
+          "json": {
+            "value": "Banner"
+          }
+        },
+        "518": {
+          "json": {
+            "value": "Ticker"
+          }
+        },
+        "520": {
+          "json": {
+            "value": "WheelRoot"
+          }
+        },
+        "521": {
+          "json": {
+            "value": "WheelDisc"
+          }
+        },
+        "522": {
+          "json": {
+            "value": "WheelHub"
+          }
+        },
+        "523": {
+          "json": {
+            "value": "Pointer"
+          }
+        },
+        "524": {
+          "json": {
+            "value": "SpinButton"
+          }
+        },
+        "525": {
+          "json": {
+            "value": "SpinLabel"
+          }
+        },
+        "528": {
+          "json": {
+            "value": "ResultText"
+          }
+        },
+        "529": {
+          "json": {
+            "value": "HostPad"
+          }
+        },
+        "530": {
+          "json": {
+            "value": "HostLabel"
+          }
+        },
+        "531": {
+          "json": {
+            "value": "Seat1"
+          }
+        },
+        "532": {
+          "json": {
+            "value": "Seat1Label"
+          }
+        },
+        "533": {
+          "json": {
+            "value": "Seat2"
+          }
+        },
+        "534": {
+          "json": {
+            "value": "Seat2Label"
+          }
+        },
+        "535": {
+          "json": {
+            "value": "Seat3"
+          }
+        },
+        "536": {
+          "json": {
+            "value": "Seat3Label"
+          }
+        },
+        "538": {
+          "json": {
+            "value": "StageLight"
+          }
+        },
+        "539": {
+          "json": {
+            "value": "WheelStand"
+          }
+        },
+        "542": {
+          "json": {
+            "value": "CrowdText"
+          }
+        },
+        "543": {
+          "json": {
+            "value": "BenchL"
+          }
+        },
+        "545": {
+          "json": {
+            "value": "BenchR"
+          }
+        },
+        "546": {
+          "json": {
+            "value": "WheelFrame"
+          }
+        },
+        "547": {
+          "json": {
+            "value": "WheelHit"
+          }
+        },
+        "548": {
+          "json": {
+            "value": "NeonFront"
+          }
+        },
+        "549": {
+          "json": {
+            "value": "NeonLeft"
+          }
+        },
+        "550": {
+          "json": {
+            "value": "NeonRight"
+          }
+        },
+        "551": {
+          "json": {
+            "value": "SpinGlow"
+          }
+        },
+        "552": {
+          "json": {
+            "value": "PointerCap"
+          }
+        },
+        "553": {
+          "json": {
+            "value": "BenchBackL"
+          }
+        },
+        "555": {
+          "json": {
+            "value": "BenchBackR"
+          }
+        },
+        "556": {
+          "json": {
+            "value": "Bezel"
+          }
+        },
+        "557": {
+          "json": {
+            "value": "FillLight"
+          }
+        },
+        "558": {
+          "json": {
+            "value": "AccentLight"
+          }
+        },
+        "559": {
+          "json": {
+            "value": "PodiumBase"
+          }
+        },
+        "560": {
+          "json": {
+            "value": "StandBase"
+          }
+        },
+        "561": {
+          "json": {
+            "value": "AudienceRiserL"
+          }
+        },
+        "562": {
+          "json": {
+            "value": "AudienceRiserR"
+          }
+        },
+        "563": {
+          "json": {
+            "value": "BenchRow2L"
+          }
+        },
+        "564": {
+          "json": {
+            "value": "BenchRow2R"
+          }
+        },
+        "565": {
+          "json": {
+            "value": "BenchBack2L"
+          }
+        },
+        "566": {
+          "json": {
+            "value": "BenchBack2R"
+          }
+        },
+        "567": {
+          "json": {
+            "value": "AudienceNeonL"
+          }
+        },
+        "568": {
+          "json": {
+            "value": "AudienceNeonR"
+          }
+        },
+        "569": {
+          "json": {
+            "value": "AudienceLabel"
+          }
         }
       }
     },
     {
       "name": "core::TextShape",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBTextShape"
+      },
       "data": {
+        "525": {
+          "json": {
+            "text": "SPIN",
+            "fontSize": 1.6,
+            "textColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "outlineWidth": 0.2,
+            "outlineColor": {
+              "r": 0.05,
+              "g": 0.02,
+              "b": 0.08
+            }
+          }
+        },
         "528": {
           "json": {
             "text": "Spin, then call a letter",
             "fontSize": 1.05,
             "textColor": {
               "r": 0.48627450980392156,
-              "g": 1.0,
+              "g": 1,
               "b": 0.6980392156862745,
-              "a": 1.0
-            },
-            "outlineWidth": 0.2,
-            "outlineColor": {
-              "r": 0.05,
-              "g": 0.02,
-              "b": 0.08
-            }
-          }
-        },
-        "542": {
-          "json": {
-            "text": "In the room: 1",
-            "fontSize": 0.9,
-            "textColor": {
-              "r": 0.9098039215686274,
-              "g": 0.8431372549019608,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "outlineWidth": 0.2,
-            "outlineColor": {
-              "r": 0.05,
-              "g": 0.02,
-              "b": 0.08
-            }
-          }
-        },
-        "525": {
-          "json": {
-            "text": "SPIN",
-            "fontSize": 1.6,
-            "textColor": {
-              "r": 1.0,
-              "g": 1.0,
-              "b": 1.0,
-              "a": 1.0
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2709,10 +3034,10 @@
             "text": "HOST",
             "fontSize": 1.05,
             "textColor": {
-              "r": 1.0,
-              "g": 1.0,
-              "b": 1.0,
-              "a": 1.0
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2725,12 +3050,12 @@
         "532": {
           "json": {
             "text": "GUEST SPIN",
-            "fontSize": 1.0,
+            "fontSize": 1,
             "textColor": {
-              "r": 1.0,
+              "r": 1,
               "g": 0.8196078431372549,
               "b": 0.4,
-              "a": 1.0
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2748,7 +3073,7 @@
               "r": 0.7843137254901961,
               "g": 0.7215686274509804,
               "b": 0.8784313725490196,
-              "a": 1.0
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2766,7 +3091,25 @@
               "r": 0.7843137254901961,
               "g": 0.7215686274509804,
               "b": 0.8784313725490196,
-              "a": 1.0
+              "a": 1
+            },
+            "outlineWidth": 0.2,
+            "outlineColor": {
+              "r": 0.05,
+              "g": 0.02,
+              "b": 0.08
+            }
+          }
+        },
+        "542": {
+          "json": {
+            "text": "In the room: 1",
+            "fontSize": 0.9,
+            "textColor": {
+              "r": 0.9098039215686274,
+              "g": 0.8431372549019608,
+              "b": 1,
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2781,10 +3124,10 @@
             "text": "STUDIO AUDIENCE",
             "fontSize": 0.95,
             "textColor": {
-              "r": 1.0,
+              "r": 1,
               "g": 0.8196078431372549,
               "b": 0.4,
-              "a": 1.0
+              "a": 1
             },
             "outlineWidth": 0.2,
             "outlineColor": {
@@ -2797,7 +3140,42 @@
       }
     },
     {
+      "name": "core-schema::Tags",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            },
+            "serializationType": "array"
+          }
+        },
+        "serializationType": "map"
+      },
+      "data": {
+        "0": {
+          "json": {
+            "tags": [
+              "Tag Group 1",
+              "Tag Group 2",
+              "Tag Group 3",
+              "Tag Group 4"
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "core::LightSource",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBLightSource"
+      },
       "data": {
         "538": {
           "json": {
@@ -2853,266 +3231,1051 @@
       }
     },
     {
-      "name": "core-schema::Name",
+      "name": "inspector::Nodes",
       "jsonSchema": {
         "type": "object",
         "properties": {
           "value": {
-            "type": "string",
-            "serializationType": "utf8-string"
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "entity": {
+                  "type": "integer",
+                  "serializationType": "entity"
+                },
+                "open": {
+                  "type": "boolean",
+                  "serializationType": "optional",
+                  "optionalJsonSchema": {
+                    "type": "boolean",
+                    "serializationType": "boolean"
+                  }
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "serializationType": "entity"
+                  },
+                  "serializationType": "array"
+                }
+              },
+              "serializationType": "map"
+            },
+            "serializationType": "array"
           }
         },
         "serializationType": "map"
       },
       "data": {
-        "512": {
+        "0": {
           "json": {
-            "value": "Floor"
+            "value": [
+              {
+                "entity": 0,
+                "open": true,
+                "children": [
+                  512,
+                  513,
+                  514,
+                  515,
+                  516,
+                  517,
+                  518,
+                  520,
+                  523,
+                  524,
+                  525,
+                  528,
+                  529,
+                  530,
+                  531,
+                  532,
+                  533,
+                  534,
+                  535,
+                  536,
+                  538,
+                  539,
+                  542,
+                  543,
+                  545,
+                  546,
+                  548,
+                  549,
+                  550,
+                  551,
+                  552,
+                  553,
+                  555,
+                  556,
+                  557,
+                  558,
+                  559,
+                  560,
+                  561,
+                  562,
+                  563,
+                  564,
+                  565,
+                  566,
+                  567,
+                  568,
+                  569
+                ]
+              },
+              {
+                "entity": 512,
+                "children": []
+              },
+              {
+                "entity": 513,
+                "children": []
+              },
+              {
+                "entity": 514,
+                "children": []
+              },
+              {
+                "entity": 515,
+                "children": []
+              },
+              {
+                "entity": 516,
+                "children": []
+              },
+              {
+                "entity": 517,
+                "children": []
+              },
+              {
+                "entity": 518,
+                "children": []
+              },
+              {
+                "entity": 520,
+                "children": [
+                  521,
+                  522,
+                  547
+                ]
+              },
+              {
+                "entity": 521,
+                "children": []
+              },
+              {
+                "entity": 522,
+                "children": []
+              },
+              {
+                "entity": 523,
+                "children": []
+              },
+              {
+                "entity": 524,
+                "children": []
+              },
+              {
+                "entity": 525,
+                "children": []
+              },
+              {
+                "entity": 528,
+                "children": []
+              },
+              {
+                "entity": 529,
+                "children": []
+              },
+              {
+                "entity": 530,
+                "children": []
+              },
+              {
+                "entity": 531,
+                "children": []
+              },
+              {
+                "entity": 532,
+                "children": []
+              },
+              {
+                "entity": 533,
+                "children": []
+              },
+              {
+                "entity": 534,
+                "children": []
+              },
+              {
+                "entity": 535,
+                "children": []
+              },
+              {
+                "entity": 536,
+                "children": []
+              },
+              {
+                "entity": 538,
+                "children": []
+              },
+              {
+                "entity": 539,
+                "children": []
+              },
+              {
+                "entity": 542,
+                "children": []
+              },
+              {
+                "entity": 543,
+                "children": []
+              },
+              {
+                "entity": 545,
+                "children": []
+              },
+              {
+                "entity": 546,
+                "children": []
+              },
+              {
+                "entity": 547,
+                "children": []
+              },
+              {
+                "entity": 548,
+                "children": []
+              },
+              {
+                "entity": 549,
+                "children": []
+              },
+              {
+                "entity": 550,
+                "children": []
+              },
+              {
+                "entity": 551,
+                "children": []
+              },
+              {
+                "entity": 552,
+                "children": []
+              },
+              {
+                "entity": 553,
+                "children": []
+              },
+              {
+                "entity": 555,
+                "children": []
+              },
+              {
+                "entity": 556,
+                "children": []
+              },
+              {
+                "entity": 557,
+                "children": []
+              },
+              {
+                "entity": 558,
+                "children": []
+              },
+              {
+                "entity": 559,
+                "children": []
+              },
+              {
+                "entity": 560,
+                "children": []
+              },
+              {
+                "entity": 561,
+                "children": []
+              },
+              {
+                "entity": 562,
+                "children": []
+              },
+              {
+                "entity": 563,
+                "children": []
+              },
+              {
+                "entity": 564,
+                "children": []
+              },
+              {
+                "entity": 565,
+                "children": []
+              },
+              {
+                "entity": 566,
+                "children": []
+              },
+              {
+                "entity": 567,
+                "children": []
+              },
+              {
+                "entity": 568,
+                "children": []
+              },
+              {
+                "entity": 569,
+                "children": []
+              },
+              {
+                "entity": 1,
+                "children": []
+              },
+              {
+                "entity": 2,
+                "children": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "inspector::SceneMetadata-v5",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "description": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "thumbnail": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "ageRating": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "enum": [
+                "T",
+                "A"
+              ],
+              "default": "A",
+              "serializationType": "enum-string",
+              "enumObject": {
+                "Teen": "T",
+                "Adult": "A"
+              }
+            }
+          },
+          "categories": {
+            "type": "array",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "art",
+                  "game",
+                  "casino",
+                  "social",
+                  "music",
+                  "fashion",
+                  "crypto",
+                  "education",
+                  "shop",
+                  "business",
+                  "sports"
+                ],
+                "default": "game",
+                "serializationType": "enum-string",
+                "enumObject": {
+                  "ART": "art",
+                  "GAME": "game",
+                  "CASINO": "casino",
+                  "SOCIAL": "social",
+                  "MUSIC": "music",
+                  "FASHION": "fashion",
+                  "CRYPTO": "crypto",
+                  "EDUCATION": "education",
+                  "SHOP": "shop",
+                  "BUSINESS": "business",
+                  "SPORTS": "sports"
+                }
+              },
+              "serializationType": "array"
+            }
+          },
+          "author": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "email": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "serializationType": "utf8-string"
+              },
+              "serializationType": "array"
+            }
+          },
+          "layout": {
+            "type": "object",
+            "properties": {
+              "base": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "serializationType": "int32"
+                  },
+                  "y": {
+                    "type": "integer",
+                    "serializationType": "int32"
+                  }
+                },
+                "serializationType": "map"
+              },
+              "parcels": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "integer",
+                      "serializationType": "int32"
+                    },
+                    "y": {
+                      "type": "integer",
+                      "serializationType": "int32"
+                    }
+                  },
+                  "serializationType": "map"
+                },
+                "serializationType": "array"
+              }
+            },
+            "serializationType": "map"
+          },
+          "silenceVoiceChat": {
+            "type": "boolean",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "boolean",
+              "serializationType": "boolean"
+            }
+          },
+          "disablePortableExperiences": {
+            "type": "boolean",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "boolean",
+              "serializationType": "boolean"
+            }
+          },
+          "spawnPoints": {
+            "type": "array",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "serializationType": "utf8-string"
+                  },
+                  "default": {
+                    "type": "boolean",
+                    "serializationType": "optional",
+                    "optionalJsonSchema": {
+                      "type": "boolean",
+                      "serializationType": "boolean"
+                    }
+                  },
+                  "position": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "object",
+                        "properties": {
+                          "single": {
+                            "type": "number",
+                            "serializationType": "float32"
+                          },
+                          "range": {
+                            "type": "array",
+                            "items": {
+                              "type": "number",
+                              "serializationType": "float32"
+                            },
+                            "serializationType": "array"
+                          }
+                        },
+                        "serializationType": "one-of"
+                      },
+                      "y": {
+                        "type": "object",
+                        "properties": {
+                          "single": {
+                            "type": "number",
+                            "serializationType": "float32"
+                          },
+                          "range": {
+                            "type": "array",
+                            "items": {
+                              "type": "number",
+                              "serializationType": "float32"
+                            },
+                            "serializationType": "array"
+                          }
+                        },
+                        "serializationType": "one-of"
+                      },
+                      "z": {
+                        "type": "object",
+                        "properties": {
+                          "single": {
+                            "type": "number",
+                            "serializationType": "float32"
+                          },
+                          "range": {
+                            "type": "array",
+                            "items": {
+                              "type": "number",
+                              "serializationType": "float32"
+                            },
+                            "serializationType": "array"
+                          }
+                        },
+                        "serializationType": "one-of"
+                      }
+                    },
+                    "serializationType": "map"
+                  },
+                  "cameraTarget": {
+                    "type": "object",
+                    "serializationType": "optional",
+                    "optionalJsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "number",
+                          "serializationType": "float32"
+                        },
+                        "y": {
+                          "type": "number",
+                          "serializationType": "float32"
+                        },
+                        "z": {
+                          "type": "number",
+                          "serializationType": "float32"
+                        }
+                      },
+                      "serializationType": "map"
+                    }
+                  }
+                },
+                "serializationType": "map"
+              },
+              "serializationType": "array"
+            }
+          },
+          "skyboxConfig": {
+            "type": "object",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "object",
+              "properties": {
+                "fixedTime": {
+                  "type": "integer",
+                  "serializationType": "optional",
+                  "optionalJsonSchema": {
+                    "type": "integer",
+                    "serializationType": "int32"
+                  }
+                },
+                "transitionMode": {
+                  "type": "integer",
+                  "serializationType": "optional",
+                  "optionalJsonSchema": {
+                    "type": "integer",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "serializationType": "enum-int",
+                    "enumObject": {
+                      "0": "TM_FORWARD",
+                      "1": "TM_BACKWARD",
+                      "TM_FORWARD": 0,
+                      "TM_BACKWARD": 1
+                    }
+                  }
+                }
+              },
+              "serializationType": "map"
+            }
+          },
+          "creator": {
+            "type": "string",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "string",
+              "serializationType": "utf8-string"
+            }
+          },
+          "disableNearbyVoiceChat": {
+            "type": "boolean",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "boolean",
+              "serializationType": "boolean"
+            }
+          },
+          "hideLandscapeTerrain": {
+            "type": "boolean",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "boolean",
+              "serializationType": "boolean"
+            }
           }
         },
-        "513": {
+        "serializationType": "map"
+      },
+      "data": {
+        "0": {
           "json": {
-            "value": "Stage"
+            "name": "The WIP Wheel",
+            "description": "Daily wearable on the gold pad. Practice the puzzle wheel at pad 1. Live rounds on the countdown—or the host hits START LIVE. Weekly solve board on the backdrop. World: rizzle.dcl.eth",
+            "thumbnail": "images/scene-thumbnail.png",
+            "categories": [
+              "game",
+              "social"
+            ],
+            "author": "Rizzle",
+            "email": "",
+            "tags": [
+              "meetup",
+              "prizes",
+              "wearables"
+            ],
+            "layout": {
+              "parcels": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 1,
+                  "y": 0
+                },
+                {
+                  "x": 0,
+                  "y": 1
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                }
+              ],
+              "base": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "silenceVoiceChat": false,
+            "disablePortableExperiences": false,
+            "spawnPoints": [
+              {
+                "name": "audience",
+                "default": true,
+                "position": {
+                  "x": {
+                    "$case": "range",
+                    "value": [
+                      15.3,
+                      16.7
+                    ]
+                  },
+                  "y": {
+                    "$case": "range",
+                    "value": [
+                      0,
+                      0
+                    ]
+                  },
+                  "z": {
+                    "$case": "range",
+                    "value": [
+                      7.45,
+                      8.55
+                    ]
+                  }
+                },
+                "cameraTarget": {
+                  "x": 16,
+                  "y": 3,
+                  "z": 18
+                }
+              }
+            ],
+            "skyboxConfig": {
+              "fixedTime": 43200
+            },
+            "creator": "",
+            "disableNearbyVoiceChat": false,
+            "hideLandscapeTerrain": true
+          }
+        }
+      }
+    },
+    {
+      "name": "asset-packs::ActionTypes",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "serializationType": "utf8-string"
+                },
+                "jsonSchema": {
+                  "type": "string",
+                  "serializationType": "utf8-string"
+                }
+              },
+              "serializationType": "map"
+            },
+            "serializationType": "array"
           }
         },
-        "548": {
+        "serializationType": "map"
+      },
+      "data": {
+        "0": {
           "json": {
-            "value": "NeonFront"
+            "value": [
+              {
+                "type": "play_animation",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"animation\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"shouldReset\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_animation",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_state",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"state\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "start_tween",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\",\"enum\":[\"move_item\",\"rotate_item\",\"scale_item\",\"keep_rotating_item\"],\"default\":\"move_item\",\"serializationType\":\"enum-string\",\"enumObject\":{\"MOVE_ITEM\":\"move_item\",\"ROTATE_ITEM\":\"rotate_item\",\"SCALE_ITEM\":\"scale_item\",\"KEEP_ROTATING_ITEM\":\"keep_rotating_item\"}},\"end\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"},\"interpolationType\":{\"type\":\"string\",\"enum\":[\"linear\",\"easeinquad\",\"easeoutquad\",\"easequad\",\"easeinsine\",\"easeoutsine\",\"easeinoutsine\",\"easeinexpo\",\"easeoutexpo\",\"easeinoutexpo\",\"easeinelastic\",\"easeoutelastic\",\"easeinoutelastic\",\"easeinbounce\",\"easeoutbounce\",\"easeinoutbounce\"],\"default\":\"linear\",\"serializationType\":\"enum-string\",\"enumObject\":{\"LINEAR\":\"linear\",\"EASEINQUAD\":\"easeinquad\",\"EASEOUTQUAD\":\"easeoutquad\",\"EASEQUAD\":\"easequad\",\"EASEINSINE\":\"easeinsine\",\"EASEOUTSINE\":\"easeoutsine\",\"EASESINE\":\"easeinoutsine\",\"EASEINEXPO\":\"easeinexpo\",\"EASEOUTEXPO\":\"easeoutexpo\",\"EASEEXPO\":\"easeinoutexpo\",\"EASEINELASTIC\":\"easeinelastic\",\"EASEOUTELASTIC\":\"easeoutelastic\",\"EASEELASTIC\":\"easeinoutelastic\",\"EASEINBOUNCE\":\"easeinbounce\",\"EASEOUTEBOUNCE\":\"easeoutbounce\",\"EASEBOUNCE\":\"easeinoutbounce\"}},\"duration\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"relative\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"direction\":{\"type\":\"object\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"}},\"speed\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_counter",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"counter\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "increment_counter",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "decrease_counter",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "play_sound",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"volume\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"global\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_sound",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_visibility",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"visible\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"physicsCollider\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"collider\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"enum\":[0,1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768],\"default\":1,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"CL_NONE\",\"1\":\"CL_POINTER\",\"2\":\"CL_PHYSICS\",\"4\":\"CL_RESERVED1\",\"8\":\"CL_RESERVED2\",\"16\":\"CL_RESERVED3\",\"32\":\"CL_RESERVED4\",\"64\":\"CL_RESERVED5\",\"128\":\"CL_RESERVED6\",\"256\":\"CL_CUSTOM1\",\"512\":\"CL_CUSTOM2\",\"1024\":\"CL_CUSTOM3\",\"2048\":\"CL_CUSTOM4\",\"4096\":\"CL_CUSTOM5\",\"8192\":\"CL_CUSTOM6\",\"16384\":\"CL_CUSTOM7\",\"32768\":\"CL_CUSTOM8\",\"CL_NONE\":0,\"CL_POINTER\":1,\"CL_PHYSICS\":2,\"CL_RESERVED1\":4,\"CL_RESERVED2\":8,\"CL_RESERVED3\":16,\"CL_RESERVED4\":32,\"CL_RESERVED5\":64,\"CL_RESERVED6\":128,\"CL_CUSTOM1\":256,\"CL_CUSTOM2\":512,\"CL_CUSTOM3\":1024,\"CL_CUSTOM4\":2048,\"CL_CUSTOM5\":4096,\"CL_CUSTOM6\":8192,\"CL_CUSTOM7\":16384,\"CL_CUSTOM8\":32768}}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "attach_to_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"anchorPointId\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "detach_from_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "play_video_stream",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"volume\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"dclCast\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_video_stream",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "play_audio_stream",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"volume\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_audio_stream",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "teleport_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"mode\":{\"type\":\"string\",\"enum\":[\"to_coordinates\",\"to_world\"],\"default\":\"to_coordinates\",\"serializationType\":\"enum-string\",\"enumObject\":{\"TO_COORDINATES\":\"to_coordinates\",\"TO_WORLD\":\"to_world\"}},\"x\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"y\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"realm\":{\"type\":\"string\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "move_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"position\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"},\"cameraTarget\":{\"type\":\"object\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "play_default_emote",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"emote\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "play_custom_emote",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "open_link",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "show_text",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"hideAfterSeconds\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"font\":{\"type\":\"integer\",\"enum\":[0,1,2],\"default\":0,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"F_SANS_SERIF\",\"1\":\"F_SERIF\",\"2\":\"F_MONOSPACE\",\"F_SANS_SERIF\":0,\"F_SERIF\":1,\"F_MONOSPACE\":2}},\"fontSize\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"textAlign\":{\"type\":\"integer\",\"enum\":[0,1,2,3,4,5,6,7,8],\"default\":4,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"TAM_TOP_LEFT\",\"1\":\"TAM_TOP_CENTER\",\"2\":\"TAM_TOP_RIGHT\",\"3\":\"TAM_MIDDLE_LEFT\",\"4\":\"TAM_MIDDLE_CENTER\",\"5\":\"TAM_MIDDLE_RIGHT\",\"6\":\"TAM_BOTTOM_LEFT\",\"7\":\"TAM_BOTTOM_CENTER\",\"8\":\"TAM_BOTTOM_RIGHT\",\"TAM_TOP_LEFT\":0,\"TAM_TOP_CENTER\":1,\"TAM_TOP_RIGHT\":2,\"TAM_MIDDLE_LEFT\":3,\"TAM_MIDDLE_CENTER\":4,\"TAM_MIDDLE_RIGHT\":5,\"TAM_BOTTOM_LEFT\":6,\"TAM_BOTTOM_CENTER\":7,\"TAM_BOTTOM_RIGHT\":8}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "hide_text",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "start_delay",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"actions\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"serializationType\":\"array\"},\"timeout\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_delay",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "start_loop",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"actions\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"serializationType\":\"array\"},\"interval\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_loop",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "clone_entity",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"position\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "remove_entity",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "show_image",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"align\":{\"type\":\"integer\",\"enum\":[0,1,2,3,4,5,6,7,8],\"default\":4,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"TAM_TOP_LEFT\",\"1\":\"TAM_TOP_CENTER\",\"2\":\"TAM_TOP_RIGHT\",\"3\":\"TAM_MIDDLE_LEFT\",\"4\":\"TAM_MIDDLE_CENTER\",\"5\":\"TAM_MIDDLE_RIGHT\",\"6\":\"TAM_BOTTOM_LEFT\",\"7\":\"TAM_BOTTOM_CENTER\",\"8\":\"TAM_BOTTOM_RIGHT\",\"TAM_TOP_LEFT\":0,\"TAM_TOP_CENTER\":1,\"TAM_TOP_RIGHT\":2,\"TAM_MIDDLE_LEFT\":3,\"TAM_MIDDLE_CENTER\":4,\"TAM_MIDDLE_RIGHT\":5,\"TAM_BOTTOM_LEFT\":6,\"TAM_BOTTOM_CENTER\":7,\"TAM_BOTTOM_RIGHT\":8}},\"height\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"width\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"hideAfterSeconds\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"text\":{\"type\":\"string\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"fontSize\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "hide_image",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"imageEntity\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "damage",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"radius\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"layer\":{\"type\":\"string\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"string\",\"enum\":[\"all\",\"player\",\"non_player\"],\"default\":\"all\",\"serializationType\":\"enum-string\",\"enumObject\":{\"ALL\":\"all\",\"PLAYER\":\"player\",\"NON_PLAYER\":\"non_player\"}}},\"hits\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "move_player_here",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "player_face_item",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "place_on_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "rotate_as_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "place_on_camera",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "rotate_as_camera",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_position",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"y\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"z\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"relative\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_rotation",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"y\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"z\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"relative\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "set_scale",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"y\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"z\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"relative\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "follow_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"speed\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"x\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"y\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"z\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"},\"minDistance\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_following_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "random",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"actions\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"serializationType\":\"array\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "batch",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"actions\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"serializationType\":\"array\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "heal_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"multiplier\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "claim_airdrop",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "lights_on",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "lights_off",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "lights_modify",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"active\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"color\":{\"type\":\"object\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"object\",\"properties\":{\"r\":{\"type\":\"number\"},\"g\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"serializationType\":\"color3\"}},\"intensity\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "change_camera",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"virtualCameraEntity\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"entity\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "change_text",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"fontSize\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"color\":{\"type\":\"object\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"object\",\"properties\":{\"r\":{\"type\":\"number\"},\"g\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"},\"a\":{\"type\":\"number\"}},\"serializationType\":\"color4\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "stop_tween",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "slide_texture",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"direction\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"y\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"serializationType\":\"map\"},\"speed\":{\"type\":\"number\",\"serializationType\":\"float32\"},\"movementType\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"enum\":[0,1],\"default\":0,\"serializationType\":\"enum-int\",\"enumObject\":{\"0\":\"TMT_OFFSET\",\"1\":\"TMT_TILING\",\"TMT_OFFSET\":0,\"TMT_TILING\":1}}},\"duration\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "freeze_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "unfreeze_player",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "change_collisions",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"visibleCollisions\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"invisibleCollisions\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "change_skybox",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"time\":{\"type\":\"integer\",\"serializationType\":\"int32\"},\"direction\":{\"type\":\"integer\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"integer\",\"serializationType\":\"int32\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "reset_skybox",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "call_script_method",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"scriptPath\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"methodName\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"params\":{\"type\":\"object\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "log_to_console",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "delete",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "spawn_entity",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"position\":{\"type\":\"object\",\"properties\":{\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"},\"z\":{\"type\":\"number\"},\"w\":{\"type\":\"number\"}},\"serializationType\":\"vector3\"}},\"serializationType\":\"map\"}"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "asset-packs::Counter",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "serializationType": "float32"
+          },
+          "value": {
+            "type": "integer",
+            "serializationType": "int32"
           }
         },
-        "549": {
+        "serializationType": "map"
+      },
+      "data": {
+        "0": {
           "json": {
-            "value": "NeonLeft"
-          }
-        },
-        "550": {
-          "json": {
-            "value": "NeonRight"
-          }
-        },
-        "514": {
-          "json": {
-            "value": "Backdrop"
-          }
-        },
-        "556": {
-          "json": {
-            "value": "Bezel"
-          }
-        },
-        "515": {
-          "json": {
-            "value": "WingLeft"
-          }
-        },
-        "516": {
-          "json": {
-            "value": "WingRight"
-          }
-        },
-        "517": {
-          "json": {
-            "value": "Banner"
-          }
-        },
-        "518": {
-          "json": {
-            "value": "Ticker"
-          }
-        },
-        "528": {
-          "json": {
-            "value": "ResultText"
-          }
-        },
-        "542": {
-          "json": {
-            "value": "CrowdText"
-          }
-        },
-        "539": {
-          "json": {
-            "value": "WheelStand"
-          }
-        },
-        "560": {
-          "json": {
-            "value": "StandBase"
-          }
-        },
-        "520": {
-          "json": {
-            "value": "WheelRoot"
-          }
-        },
-        "521": {
-          "json": {
-            "value": "WheelDisc"
-          }
-        },
-        "547": {
-          "json": {
-            "value": "WheelHit"
-          }
-        },
-        "522": {
-          "json": {
-            "value": "WheelHub"
-          }
-        },
-        "546": {
-          "json": {
-            "value": "WheelFrame"
-          }
-        },
-        "523": {
-          "json": {
-            "value": "Pointer"
-          }
-        },
-        "552": {
-          "json": {
-            "value": "PointerCap"
-          }
-        },
-        "551": {
-          "json": {
-            "value": "SpinGlow"
-          }
-        },
-        "559": {
-          "json": {
-            "value": "PodiumBase"
-          }
-        },
-        "524": {
-          "json": {
-            "value": "SpinButton"
-          }
-        },
-        "525": {
-          "json": {
-            "value": "SpinLabel"
-          }
-        },
-        "529": {
-          "json": {
-            "value": "HostPad"
-          }
-        },
-        "530": {
-          "json": {
-            "value": "HostLabel"
-          }
-        },
-        "531": {
-          "json": {
-            "value": "Seat1"
-          }
-        },
-        "532": {
-          "json": {
-            "value": "Seat1Label"
-          }
-        },
-        "533": {
-          "json": {
-            "value": "Seat2"
-          }
-        },
-        "534": {
-          "json": {
-            "value": "Seat2Label"
-          }
-        },
-        "535": {
-          "json": {
-            "value": "Seat3"
-          }
-        },
-        "536": {
-          "json": {
-            "value": "Seat3Label"
-          }
-        },
-        "561": {
-          "json": {
-            "value": "AudienceRiserL"
-          }
-        },
-        "562": {
-          "json": {
-            "value": "AudienceRiserR"
-          }
-        },
-        "567": {
-          "json": {
-            "value": "AudienceNeonL"
-          }
-        },
-        "568": {
-          "json": {
-            "value": "AudienceNeonR"
-          }
-        },
-        "543": {
-          "json": {
-            "value": "BenchL"
-          }
-        },
-        "545": {
-          "json": {
-            "value": "BenchR"
-          }
-        },
-        "553": {
-          "json": {
-            "value": "BenchBackL"
-          }
-        },
-        "555": {
-          "json": {
-            "value": "BenchBackR"
-          }
-        },
-        "563": {
-          "json": {
-            "value": "BenchRow2L"
-          }
-        },
-        "564": {
-          "json": {
-            "value": "BenchRow2R"
-          }
-        },
-        "565": {
-          "json": {
-            "value": "BenchBack2L"
-          }
-        },
-        "566": {
-          "json": {
-            "value": "BenchBack2R"
-          }
-        },
-        "569": {
-          "json": {
-            "value": "AudienceLabel"
-          }
-        },
-        "538": {
-          "json": {
-            "value": "StageLight"
-          }
-        },
-        "557": {
-          "json": {
-            "value": "FillLight"
-          }
-        },
-        "558": {
-          "json": {
-            "value": "AccentLight"
+            "id": 0,
+            "value": 0
           }
         }
       }

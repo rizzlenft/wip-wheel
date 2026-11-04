@@ -2,21 +2,29 @@
 
 Weekly game-show studio for [The WIP Meetup](https://thewipmeetup.com), built as a Decentraland SDK7 scene.
 
-This repo is the **Creator Success application package**: a Game Design Document plus a playable test scene. Two games, one room.
+Two games, one room. Gold pad: daily chance. Pink pad: Thursday Wheel of Fortune.
 
-- GDD: [`design/gdd.md`](design/gdd.md) (PDF: [`design/The-WIP-Wheel-GDD.pdf`](design/The-WIP-Wheel-GDD.pdf))
-- How to apply: [`design/apply.md`](design/apply.md)
-- This week's guest card: [`src/week.json`](src/week.json)
+**Accepted into Decentraland Creator Success (September 2026).**
+
+**Working doc (read first):** [`design/MASTER.md`](design/MASTER.md)
+
+- GDD (frozen pitch): [`design/gdd.md`](design/gdd.md)
+- This week's guest card in the running scene: [`src/week.ts`](src/week.ts)
+
+**World:** `rizzle.dcl.eth` — in Explorer, `/world rizzle.dcl.eth`
 
 ## What you can play right now
 
-Walk in facing the studio.
+You spawn as studio audience, facing the puzzle wall. Gold **DAILY** pad stage-right; contestant pads and the wheel stage-left.
 
-- **Gold pad, left wall — daily chance.** One spin. Small prize flashes on the left jumbotron. Does not turn the wheel. Does not open letters.
-- **Pink pad, center — Wheel of Fortune.** Thursday live show. Wheel spins, call a letter, bank the slice. Jackpot and NFT live here.
-- **Right wall — show board.** Countdown to Thursday 12 PM PT, guest/prize hype, called letters, contestant scores, round bank.
+- **Gold pad or the DAILY sign — daily chance.** Tap. Small prize flashes on the DAILY sign. Does not turn the wheel. Does not open letters.
+- **Pad 1 or the wheel itself — Wheel of Fortune.** Wheel spins, call a letter on the HUD, bank the slice. Jackpot and NFT live here. Pads 2 and 3 are empty chairs for the later three-person show.
+- **Title card.** THE WIP WHEEL + Thursdays 12 PM PT.
+- **Under the puzzle.** Used-letter board and three contestant scores. Player 1 tracks the round.
 
-Test scene prizes are labels (`50 $WIP`, `JACKPOT`, `NFT DROP`, …). Nothing leaves a wallet. Daily one-per-day lock is off so reviewers can try it.
+Floor plan lives in [`src/layout.ts`](src/layout.ts).
+
+Test scene prizes are labels (`50 $WIP`, `JACKPOT`, `NFT DROP`, …). Nothing leaves a wallet.
 
 ## Open in Creator Hub
 
@@ -31,15 +39,11 @@ cd ~/Projects/wip-wheel
 npm run start
 ```
 
-## Publish to a World (needed for the application)
+## Preview and publish
 
-You need a wallet that owns a Decentraland NAME or an ENS name.
+Creator Hub → **Open Scene** → this folder → **Preview**. Or `npm run start` from the repo.
 
-1. Open the scene in Creator Hub.
-2. **Publish** → **Publish to World** → pick your NAME.
-3. Paste the World name into the application form (section 3.3).
-
-CLI equivalent, after you set `worldConfiguration.name` in `scene.json`:
+Hub's copy of `src/` goes stale. Rsync this `src/` into the Hub scene (or quit Hub fully and reopen) before Preview/Publish. Live World is already `rizzle.dcl.eth`.
 
 ```bash
 npm run deploy -- --target-content https://worlds-content-server.decentraland.org
@@ -49,14 +53,14 @@ npm run deploy -- --target-content https://worlds-content-server.decentraland.or
 
 ```
 assets/scene/main.composite   stage, wheel, pads, signs
-assets/Images/                wheel face + WIP logo
 src/index.ts                  scene entry
+src/layout.ts                 floor plan: wheel, pads, signs, board, banner
 src/game.ts                   show spin, letters, daily request
-src/week.json                 this week's guest, hype, puzzle
-src/countdown.ts              right-wall show board
-src/dailyWall.ts              left-wall daily jumbotron
-src/prizes.ts                 show table + daily table
-design/gdd.md                 game design document
+src/dailyWall.ts              DAILY sign + gold pad
+src/countdown.ts              SHOW sign (countdown, guest, bank) + set dressing
+src/week.ts                   live guest / puzzle / clock
+design/MASTER.md              working doc (read first)
+design/gdd.md                 accepted pitch (frozen)
 ```
 
 ## Brand

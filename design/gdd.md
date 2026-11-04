@@ -4,7 +4,10 @@ Game Design Document for Decentraland Creator Success
 Working title: **The WIP Wheel**  
 Creator: **Rizzle** (host of [The WIP Meetup](https://thewipmeetup.com))  
 Scene: this repository  
-Status: application test scene — daily chance game + Thursday Wheel of Fortune show
+Status: **accepted** into Creator Success (September 2026). This document is the pitch that got us in. Do not silently rewrite it.
+
+**Working brief for the funded slice:** [MASTER.md](MASTER.md)  
+**Index:** [README.md](README.md)
 
 ---
 

@@ -2,6 +2,16 @@
 
 This is a Decentraland SDK7 scene project.
 
+**Read `design/MASTER.md` first, every session.** It is the north star, the playtest log, and the current build pass. If another note disagrees, MASTER wins. Shipping order is `design/roadmap-v0-v4.md`. What to build next is `design/NOW.md`.
+
+**V0 is paid.** `design/V0-FREEZE.md` still protects the daily claim and wearable payout. The show loop changes only along the V1 slices in the roadmap. Do not mix the gold daily table into a live round.
+
+**Positioning:** Before moving or adding any prop, read `design/positioning.md`.  
+**Dress workflow:** `design/layout-workflow.md` + `design/layout-hub-sync.md` — Hub for looks (keep names); sync meters into `layout.ts`; Creator Hub MCP required for agent Hub edits; never recreate claim/spin.  
+**Layout moves (Draft A):** `layout-mistakes.md` · `layout-next.md`. After any Hub spawn edit: `npm run sync:spawn` && `npm run verify:spawn-sync` ([layout-spawn-desync.md](design/layout-spawn-desync.md)). Empty sky ≠ deleted set. Rule: `.cursor/rules/layout-move-regression.mdc`. Do not thaw pipelines to fix blocking.
+
+**Before any daily/show spin debug:** run `npm run verify:preview-path`, then confirm the Preview start log bundles `/Users/rizzle/Projects/wip-wheel` (never a Creator Hub `Scenes/` mirror). Daily vs show authorities live in `design/pipelines.md` — do not mix prize tables, locks, or gold `$WIP` labels.
+
 ## Before writing any code
 
 This project relies on the official Decentraland SDK Skills, maintained by the Decentraland Foundation. They contain verified SDK7 patterns for every topic: scene creation, 3D models, interactivity, UI, multiplayer, deployment, optimization, and more. Start with the `sdk-scenes` skill, which acts as an index for all the other topics.

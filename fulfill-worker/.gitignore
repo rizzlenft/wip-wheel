@@ -1,0 +1,5 @@
+.env
+pendingFulfillment.json
+sent-urns.json
+data
+node_modules

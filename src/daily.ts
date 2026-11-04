@@ -1,6 +1,6 @@
 import { getPlayer } from '@dcl/sdk/players'
 
-/** V0 testing: podium stays live. Flip on before publish. */
+/** Demo publish: podium stays live so reviewers can retry. Flip on only if we need a real lock. */
 export const DAILY_ONCE_PER_DAY = false
 
 const claimedDayByUser = new Map<string, string>()

@@ -11,3 +11,6 @@ main.crdt
 tmp/
 .cursor/
 dclcontext/
+.env
+.env.local
+.env.storage

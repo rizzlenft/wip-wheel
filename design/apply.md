@@ -1,6 +1,12 @@
-# Creator Success — application checklist
+# Creator Success — application archive
 
-Official path: https://docs.decentraland.org/creator/studio-onboarding
+**Application is in.** World `rizzle.dcl.eth`. Repo https://github.com/rizzlenft/wip-wheel.
+
+Living docs: [MASTER.md](MASTER.md) (daily driver) · [README.md](README.md)
+
+The checklist below is historical.
+
+---
 
 You do **not** need a pitch deck. They review this repo, the GDD, and the deployed test scene.
 
@@ -15,7 +21,7 @@ You do **not** need a pitch deck. They review this repo, the GDD, and the deploy
 
 `DEPLOYED_SCENE_URL`: _paste after publish_
 
-`GITHUB_REPO_URL`: _paste after you push_
+`GITHUB_REPO_URL`: https://github.com/rizzlenft/wip-wheel
 
 ## Form draft (edit in your voice)
 

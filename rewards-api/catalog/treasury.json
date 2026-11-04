@@ -1,0 +1,27 @@
+{
+  "chain": "polygon",
+  "label": "WIP Wheel prize treasury",
+  "notes": [
+    "Rizzle-owned. Bay sends DCL wearables HERE.",
+    "Marketplace Credits are NOT onchain — do not expect credits to appear in this wallet. Credits are awarded via Finance/Bay off-chain using the API pending queue.",
+    "Optional later: MANA/USDC for the crypto rail can sit in this same address.",
+    "Never commit the private key."
+  ],
+  "address": "0xd9618C06458e98a831F503194cC8b62fB0384d45",
+  "stagingDeposit": "0x351764F8Ef0A80953F80885Fa0f7a7c5F097fC29",
+  "accepts": ["dcl_wearables_erc721", "mana_polygon", "usdc_polygon"],
+  "doesNotAccept": ["marketplace_credits_offchain"],
+  "wearablePoolTarget": 50,
+  "snapshot2026-10-06-hot": {
+    "totalNfts": 3,
+    "pol": 5,
+    "items": [
+      { "name": "Party Pigeon (6th Birthday)", "amount": 2 },
+      { "name": "Spooky Wings", "amount": 1 }
+    ]
+  },
+  "snapshot2026-10-06-staging": {
+    "note": "Bay deposit / remainder after sweep to hot",
+    "source": "https://peer.decentraland.org/lambdas/users/0x351764F8Ef0A80953F80885Fa0f7a7c5F097fC29/wearables"
+  }
+}

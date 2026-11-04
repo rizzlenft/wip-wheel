@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: wip-wheel-fulfill
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npx tsx src/server.ts
+    healthCheckPath: /health
+    envVars:
+      - key: FULFILL_SECRET
+        sync: false
+      - key: FULFILLER_PRIVATE_KEY
+        sync: false
+      - key: PRIZE_TREASURY
+        value: "0x351764F8Ef0A80953F80885Fa0f7a7c5F097fC29"
+      - key: POLYGON_RPC_URL
+        value: https://polygon-rpc.com
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
